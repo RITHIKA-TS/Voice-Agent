@@ -1,5 +1,5 @@
-# Aura Voice Agent
-Aura Voice Agent is a real-time AI-powered voice assistant that enables seamless conversational experiences. It leverages LiveKit for live audio streaming, Deepgram for speech-to-text (STT) and text-to-speech (TTS), Groq LLaMA for language understanding, and Silero VAD for detecting active speech.
+# Smart Voice Agent
+Smart Voice Agent is a real-time AI-powered voice assistant that enables seamless conversational experiences. It leverages LiveKit for live audio streaming, Deepgram for speech-to-text (STT) and text-to-speech (TTS), Groq LLaMA for language understanding, and Silero VAD for detecting active speech.
 
 ## Features
 1.Real-time voice interactions.🎙️
@@ -182,18 +182,8 @@ Using multiple external APIs (Deepgram and Groq) sometimes resulted in temporary
 The generated LiveKit access tokens had only a short lifespan, requiring frequent regeneration to maintain active sessions. Implementing a secure and automated token renewal mechanism was essential to ensure uninterrupted connectivity for long-running voice sessions.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+## Project Vedio
+[Watch](https://drive.google.com/file/d/1o9QnDb7DC5HUfb1ZHc8iXhPRPfq-PsZA/view?usp=sharing)
 
 
 ## Additional Resources
