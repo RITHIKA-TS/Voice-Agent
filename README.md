@@ -70,38 +70,38 @@ Frontend (React + LiveKit SDK)
 | **`ChatContext`**      | Maintains a conversation memory to ensure context-aware, natural responses over multiple turns.                  |
 | **`RoomInputOptions`** | Controls room-level audio and video input behaviors (e.g., closing on disconnect, voice events, etc.).           |
 
-### Components 
-Deepgram STT:model="nova-2"
-Deepgram TTS:model="aura-luna-en"
-Groq LLaMA:model="llama-3.1-8b-instant"
+## Components 
+Deepgram STT:model="nova-2" | 
+Deepgram TTS:model="aura-luna-en" |
+Groq LLaMA:model="llama-3.1-8b-instant" |
 Silero VAD:Detects voice activity for precise speech capture
 
 
 
 ## ⚙️ Setup Instructions
 ### 🔧 Prerequisites
-Python ≥ 3.10
-LiveKit Cloud account → [cloud.livekit](cloud.livekit.io)
-Deepgram API key → [deepgram](deepgram.com)
-Groq API key → [groq](groq.com)
+Python ≥ 3.10 |
+LiveKit Cloud account | 
+Deepgram API key |
+Groq API key 
 ### Set environment variables:
-'LIVEKIT_API_KEY=your_livekit_key'
-'LIVEKIT_API_SECRET=your_livekit_secret'
-'DEEPGRAM_API_KEY=your_deepgram_key'
-'GROQ_API_KEY=your_groq_key'
+LIVEKIT_API_KEY=your_livekit_key |
+LIVEKIT_API_SECRET=your_livekit_secret |
+DEEPGRAM_API_KEY=your_deepgram_key |
+GROQ_API_KEY=your_groq_key
 ### Create Virtual Environment
-'python -m venv .venv'
-'source .venv/bin/activate'      
-'.venv\Scripts\activate'  
+python -m venv .venv	|
+source .venv/bin/activate  |
+.venv\Scripts\activate
 ### Install Packages of Compatible Version you want 
-livekit-agents==1.2.17
-livekit-plugins-silero==1.2.8
-livekit-plugins-deepgram==1.0.0
-livekit-plugins-groq==1.2.17
+livekit-agents==1.2.17  | 
+livekit-plugins-silero==1.2.8  |
+livekit-plugins-deepgram==1.0.0  |
+livekit-plugins-groq==1.2.17  |
 python-dotenv==1.0.0
 ### Livekit Room Connect
-'python livekit_voice_agent.py connect --room test-room'
-		### RoomIO` -> `AgentSession` -> `TranscriptSynchronizer` -> `RoomIO
+'python livekit_voice_agent.py connect --room test-room'  | 
+		'RoomIO` -> `AgentSession` -> `TranscriptSynchronizer` -> `RoomIO'
 ### Livekit Console
 'python livekit_voice_agent.py console' 
 ### Start of the Session
@@ -151,13 +151,13 @@ LiveKit Cloud handles the real-time voice streaming, WebRTC connections, and roo
 ### Flow:
 ### Project Setup:
 	Create a project at cloud.livekit.io and obtain credentials:
-	'LIVEKIT_URL' → WebSocket endpoint (e.g., wss://aura.livekit.cloud)
-	'LIVEKIT_API_KEY'
-	'LIVEKIT_API_SECRET'
+	LIVEKIT_URL → WebSocket endpoint (e.g., wss://aura.livekit.cloud) ; 
+	LIVEKIT_API_KEY ;
+	LIVEKIT_API_SECRET
 ### Secure Token Generation:
 	The Flask backend generates temporary access tokens using these credentials.
-	'token = AccessToken(API_KEY, API_SECRET, identity="user")'
-	'token.add_grant(VideoGrant(room="aura-room"))'
+	token = AccessToken(API_KEY, API_SECRET, identity="user") ;
+	token.add_grant(VideoGrant(room="aura-room"))
 	The frontend requests this token before joining a LiveKit room.
 ### Real-Time Communication:
 	Once connected, all microphone input is routed through LiveKit Cloud, where:
@@ -183,7 +183,7 @@ The generated LiveKit access tokens had only a short lifespan, requiring frequen
 
 
 ## Project Vedio
-[Watch](https://drive.google.com/file/d/1o9QnDb7DC5HUfb1ZHc8iXhPRPfq-PsZA/view?usp=sharing)
+[Watch](https://drive.google.com/file/d/1o9QnDb7DC5HUfb1ZHc8iXhPRPfq-PsZA/view?usp=sharing) - short vedios and images regarding the implementation 
 
 
 ## Additional Resources
